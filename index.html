@@ -29,8 +29,40 @@
                           </button>
                           <div class="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul class="navbar-nav">
-                              <li class="nav-item">
-                                <a class="nav-link" href="#destinations">Desitnations</a>
+                             <li class="dropdown nav-item" id="new-drop">
+                                <a
+                                  href=""
+                                  class="dropdown-toggle nav-link"
+                                  data-toggle="dropdown"
+                                  >Destinations &nbsp;
+                                  <span
+                                    class="glyphicon glyphicon-chevron-down"
+                                  ></span>
+                                </a>
+                                <ul class="dropdown-menu" id="drop">
+                                  <li class="nav-item">
+                                    <a href="" class="nav-link"
+                                      >India</a
+                                    >
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="" class="nav-link"
+                                      >Europe</a
+                                    >
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="" class="nav-link">USA</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="" class="nav-link">Middle East</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="" class="nav-link">Australia</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="" class="nav-link">New Zealand</a>
+                                  </li>
+                                </ul>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#hotels">Hotels</a>
@@ -360,4 +392,16 @@
   </script>
 
 
+ <script type="text/javascript">
+  jQuery(document).ready(function ($) {
+    $(".navbar-nav li.dropdown").hover(
+      function () {
+        $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeIn(500);
+      },
+      function () {
+        $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeOut(500);
+      }
+    );
+  });
+</script>
  
